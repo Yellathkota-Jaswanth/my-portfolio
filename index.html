@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="header">
+        <div id="container">
+            <nav>
+                <p><span class="red"> Yellathkota</span> <span class="white">Jaswanth</span></p>
+                <ul>
+                    <li><a href="#">Home Page</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">Skills</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-bars fa-2x"></i>
+                    <i class="fa-solid fa-xmark fa-2x"></i>
+                </ul>
+            </nav>
+        </div>
+        <div id="header-text">
+
+            <div id="header-text-left">
+                <p>Full Stack Developer<p>
+                <h1>Hi, I am Jaswanth</h1>
+                <div id="picture">
+                </div>
+            </div>
+            <div id="header-text-right">
+                <img src="images/IMG_20250303_194316-Photoroom.png">
+            </div>
+         </div>
+            
+        
+    </div>
+
+    <div id="about">
+        <h1>ABOUT</h1>
+        <p>A passionate Full Stack Developer crafting dynamic and scalable web applications. With expertise in the MERN stack (MongoDB, Express, React.js, Node.js), I specialize in creating seamless frontend experiences and efficient backend systems. My focus is on developing secure, user-friendly platforms, integrating real-time features, and ensuring smooth API interactions. I love solving complex problems with clean, maintainable code.</p>
+        <div class="tab-titles ">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+            <p class="tab-links"  onclick="opentab('education')">Education</p>
+
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+            <ul><span>
+                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>MongoDB</li>
+                <li>Git</li>
+                <li>ReactJS</li>
+                <li>Node</li>
+                <li>ExpresJS</li>
+
+
+
+
+            </span>
+
+            </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+            <ul>
+                <li><span>Tata Consultancy services</span><br>2021-present</li>
+                
+            </ul>
+        </div><div class="tab-contents" id="education">
+            <ul>
+                <li><span>Saveetha Engineering college</span><br>Computer Science</li>
+                
+
+            </ul>
+        </div>
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/carlos-muza-hpjSkU2UYSU-unsplash.jpg">
+                        <div class="layer">
+                            <h3>Google-Page</h3>
+                            <p>This is a replica of the google home page</p>
+                            <a href="https://google-1-ivdc.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/fabian-irsara-67l-QujB14w-unsplash.jpg">
+                        <div class="layer">
+                            <h3>Find-my-book</h3>
+                            <p>You could find the most popular books available out there</p>
+                            <a href="https://find-my-books-z5px.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                        </div>
+                    </div><div class="work">
+                        <img src="images/markus-winkler-Q2J2qQsoYH8-unsplash.jpg">
+                        <div class="layer">
+                            <h3>Counselling website</h3>
+                            <p>You could book sessions with certified mentors regarding mental health, relationship advice.</p>
+                            <a href="https://transcendent-zuccutto-93cc01.netlify.app/"><i class="fas fa-external-link-alt"></i></a>
+
+                        </div>
+                    </div><div class="work">
+                        <img src="images/scott-graham-5fNmWej4tAA-unsplash.jpg">
+                        <div class="layer">
+                            <h3>Action-items</h3>
+                            <p>Provides a list where you could add action items</p>
+                            <a href="https://action-ite.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> jaswanthyellathkota@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 8247756616</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jaswanth-y-87b9ab2a1/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/Yellathkota-Jaswanth"><i class="fa-brands fa-github fa-2x"></i></a>
+
+
+                </div>
+                <a href="images/Resume.pdf" download class="btn">Download Resume</a>
+            </div>
+        </div>
+    </div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+
+
+</script>    
+</body>
+</html>
